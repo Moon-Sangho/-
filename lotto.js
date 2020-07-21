@@ -23,40 +23,42 @@ console.log('Win number :', win.sort(function (p, c) {return p - c}), 'bonus :',
 // 화면에 당첨 번호 출력(1초에 하나씩)
 const winBall = document.getElementById('winBall');
 
-setTimeout(function printTime() {
+function BallCSS(number) {
     const winNumber = document.createElement('div');
-    winNumber.textContent = win[0];
+    winNumber.textContent = win[number];
+    winNumber.style.display = 'inline-block';
+    winNumber.style.border = '1px solid black';
+    winNumber.style.borderRadius = '100%'; 
+    winNumber.style.width = '20px';
+    winNumber.style.height = '20px';
+    winNumber.style.textAlign = 'center';
+    winNumber.style.padding = '10px';
+    winNumber.style.margin = '10px'; 
     winBall.appendChild(winNumber);
+}
+
+setTimeout(function printTime() {
+    BallCSS(0);
 }, 1000);
 
 setTimeout(function printTime() {
-    const winNumber = document.createElement('div');
-    winNumber.textContent = win[1];
-    winBall.appendChild(winNumber);
+    BallCSS(1);
 }, 2000);
 
 setTimeout(function printTime() {
-    const winNumber = document.createElement('div');
-    winNumber.textContent = win[2];
-    winBall.appendChild(winNumber);
+    BallCSS(2);
 }, 3000);
 
 setTimeout(function printTime() {
-    const winNumber = document.createElement('div');
-    winNumber.textContent = win[3];
-    winBall.appendChild(winNumber);
+    BallCSS(3);
 }, 4000);
 
 setTimeout(function printTime() {
-    const winNumber = document.createElement('div');
-    winNumber.textContent = win[4];
-    winBall.appendChild(winNumber);
+    BallCSS(4);
 }, 5000);
 
 setTimeout(function printTime() {
-    const winNumber = document.createElement('div');
-    winNumber.textContent = win[5];
-    winBall.appendChild(winNumber);
+    BallCSS(5);
 }, 6000);
 
 
@@ -65,6 +67,14 @@ setTimeout(function printTime() {
     const bonusBall = document.getElementById('bonusBall');
     const bonusNumber = document.createElement('div');
     bonusNumber.textContent = bonus;
+    bonusNumber.style.display = 'inline-block';
+    bonusNumber.style.border = '1px solid black';
+    bonusNumber.style.borderRadius = '100%'; 
+    bonusNumber.style.width = '20px';
+    bonusNumber.style.height = '20px';
+    bonusNumber.style.textAlign = 'center';
+    bonusNumber.style.padding = '10px';
+    bonusNumber.style.margin = '10px'; 
     bonusBall.appendChild(bonusNumber);
 }, 7000);
 
