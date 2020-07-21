@@ -1,3 +1,5 @@
+https://moon-sangho.github.io/lottery/
+
 * 1st commit
 
   1부터 45의 숫자가 들어있는 배열 생성
