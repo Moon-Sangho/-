@@ -19,3 +19,7 @@
 * 5th commit
   
   당첨볼, 보너스볼에 CSS에 추가
+
+* 6th commit
+
+  JS 리팩토링, 당첨볼, 보너스볼에 CSS 추가

@@ -23,58 +23,63 @@ console.log('Win number :', win.sort(function (p, c) {return p - c}), 'bonus :',
 // 화면에 당첨 번호 출력(1초에 하나씩)
 const winBall = document.getElementById('winBall');
 
-function BallCSS(number) {
-    const winNumber = document.createElement('div');
-    winNumber.textContent = win[number];
-    winNumber.style.display = 'inline-block';
-    winNumber.style.border = '1px solid black';
-    winNumber.style.borderRadius = '100%'; 
-    winNumber.style.width = '20px';
-    winNumber.style.height = '20px';
-    winNumber.style.textAlign = 'center';
-    winNumber.style.padding = '10px';
-    winNumber.style.margin = '10px'; 
-    winBall.appendChild(winNumber);
+function BallCSS(number, result) {
+    const ball = document.createElement('div');
+    ball.textContent = number;
+    ball.style.display = 'inline-block';
+    ball.style.border = '1px solid black';
+    ball.style.borderRadius = '100%'; 
+    ball.style.width = '20px';
+    ball.style.height = '20px';
+    ball.style.textAlign = 'center';
+    ball.style.padding = '10px';
+    ball.style.margin = '10px';
+    let backGroundColor;
+    if (number <= 10) {
+        backGroundColor = 'red';
+    } else if (number <= 20) {
+        backGroundColor = 'orange';
+    } else if (number <= 30) {
+        backGroundColor = 'yellow';
+    } else if (number <= 40) {
+        backGroundColor = 'blue';
+    } else {
+        backGroundColor = 'green';
+    }
+    ball.style.background = backGroundColor;
+    ball.style.fontWeight = 'bold'; 
+    result.appendChild(ball);
 }
 
 setTimeout(function printTime() {
-    BallCSS(0);
+    BallCSS(win[0], winBall);
 }, 1000);
 
 setTimeout(function printTime() {
-    BallCSS(1);
+    BallCSS(win[1], winBall);
 }, 2000);
 
 setTimeout(function printTime() {
-    BallCSS(2);
+    BallCSS(win[2], winBall);
 }, 3000);
 
 setTimeout(function printTime() {
-    BallCSS(3);
+    BallCSS(win[3], winBall);
 }, 4000);
 
 setTimeout(function printTime() {
-    BallCSS(4);
+    BallCSS(win[4], winBall);
 }, 5000);
 
 setTimeout(function printTime() {
-    BallCSS(5);
+    BallCSS(win[5], winBall);
 }, 6000);
 
 
 // 화면에 보너스 번호 출력
+const bonusBall = document.getElementById('bonusBall');
+
 setTimeout(function printTime() {
-    const bonusBall = document.getElementById('bonusBall');
-    const bonusNumber = document.createElement('div');
-    bonusNumber.textContent = bonus;
-    bonusNumber.style.display = 'inline-block';
-    bonusNumber.style.border = '1px solid black';
-    bonusNumber.style.borderRadius = '100%'; 
-    bonusNumber.style.width = '20px';
-    bonusNumber.style.height = '20px';
-    bonusNumber.style.textAlign = 'center';
-    bonusNumber.style.padding = '10px';
-    bonusNumber.style.margin = '10px'; 
-    bonusBall.appendChild(bonusNumber);
+    BallCSS(bonus, bonusBall);
 }, 7000);
 
