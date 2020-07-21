@@ -20,19 +20,51 @@ const bonus = shuffle[shuffle.length - 1];
 
 console.log('Win number :', win.sort(function (p, c) {return p - c}), 'bonus :', bonus);
 
-// 화면에 당첨 번호 출력
+// 화면에 당첨 번호 출력(1초에 하나씩)
 const winBall = document.getElementById('winBall');
 
-for (let i = 0; i < win.length; i++) {
+setTimeout(function printTime() {
     const winNumber = document.createElement('div');
-    winNumber.textContent = win[i];
+    winNumber.textContent = win[0];
     winBall.appendChild(winNumber);
-}
+}, 1000);
+
+setTimeout(function printTime() {
+    const winNumber = document.createElement('div');
+    winNumber.textContent = win[1];
+    winBall.appendChild(winNumber);
+}, 2000);
+
+setTimeout(function printTime() {
+    const winNumber = document.createElement('div');
+    winNumber.textContent = win[2];
+    winBall.appendChild(winNumber);
+}, 3000);
+
+setTimeout(function printTime() {
+    const winNumber = document.createElement('div');
+    winNumber.textContent = win[3];
+    winBall.appendChild(winNumber);
+}, 4000);
+
+setTimeout(function printTime() {
+    const winNumber = document.createElement('div');
+    winNumber.textContent = win[4];
+    winBall.appendChild(winNumber);
+}, 5000);
+
+setTimeout(function printTime() {
+    const winNumber = document.createElement('div');
+    winNumber.textContent = win[5];
+    winBall.appendChild(winNumber);
+}, 6000);
+
 
 // 화면에 보너스 번호 출력
-const bonusBall = document.getElementById('bonusBall');
-const bonusNumber = document.createElement('div');
-
-bonusNumber.textContent = bonus;
-bonusBall.appendChild(bonusNumber);
+setTimeout(function printTime() {
+    const bonusBall = document.getElementById('bonusBall');
+    const bonusNumber = document.createElement('div');
+    bonusNumber.textContent = bonus;
+    bonusBall.appendChild(bonusNumber);
+}, 7000);
 
