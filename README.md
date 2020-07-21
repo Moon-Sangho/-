@@ -25,3 +25,7 @@ https://moon-sangho.github.io/lottery/
 * 6th commit
 
   JS 리팩토링, 당첨볼, 보너스볼에 CSS 추가
+
+* 7th commit
+
+  HTML 파일 이름 변경
