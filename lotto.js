@@ -51,29 +51,13 @@ function BallCSS(number, result) {
     result.appendChild(ball);
 }
 
-setTimeout(function printTime() {
-    BallCSS(win[0], winBall);
-}, 1000);
-
-setTimeout(function printTime() {
-    BallCSS(win[1], winBall);
-}, 2000);
-
-setTimeout(function printTime() {
-    BallCSS(win[2], winBall);
-}, 3000);
-
-setTimeout(function printTime() {
-    BallCSS(win[3], winBall);
-}, 4000);
-
-setTimeout(function printTime() {
-    BallCSS(win[4], winBall);
-}, 5000);
-
-setTimeout(function printTime() {
-    BallCSS(win[5], winBall);
-}, 6000);
+for (let i = 0; i < win.length; i++) {
+    (function closure(j) {
+        setTimeout(function () {
+            BallCSS(win[j], winBall);
+        }, (j + 1) * 1000);
+    })(i);
+}
 
 
 // 화면에 보너스 번호 출력

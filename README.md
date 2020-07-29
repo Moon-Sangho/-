@@ -29,3 +29,6 @@ https://moon-sangho.github.io/lottery/
 * 7th commit
 
   HTML 파일 이름 변경
+
+* 8th commit
+  기존 중복되었던 코드를 closure 속성을 이용해 리팩토링
